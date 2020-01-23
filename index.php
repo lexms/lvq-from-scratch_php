@@ -45,7 +45,7 @@ function weight_update($learning_rate, $chosen_class, $data_to_update){
 
 function train(){
     print('<br><br>============================================================================================================<br> Training<br>');
-    $epochs = 1;
+    $epochs = 3;
     $learning_rate = 0.05;
     $fungsi_pembelajaran = 0.01;
     $dataset =  [
@@ -60,7 +60,7 @@ function train(){
     
 
     
-    print('<br>Dataset= <br>');
+    print('<br>DATA TRAINING= <br>');
         foreach ($dataset as $x ){
             print('{');
             foreach($x as $val ){
@@ -175,12 +175,12 @@ function test($final_weight){
     
 
     
-    $test_set = [[0,0,1,0],[1,0,0,1]];
+    $test_set = [[0,1,1,0, 0],[1,0,0,1, 1]];
 
     print('<br><br>');
     foreach ($test_set as $row => $val){
 
-        print('Input= {');
+        print('DATA TEST = {');
         foreach ($val as $x =>$value){
             print($value.', ');
         }
